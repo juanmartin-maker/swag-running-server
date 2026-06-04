@@ -3,7 +3,7 @@ const cors = require("cors");
 const fetch = (...args) => import("node-fetch").then(({ default: f }) => f(...args));
 
 const app = express();
-app.use(cors({ origin: "https://swag-running-hold.vercel.app" }));
+app.use(cors());
 app.use(express.json());
 
 const MP_ACCESS_TOKEN = process.env.MP_ACCESS_TOKEN;
